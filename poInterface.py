@@ -67,8 +67,8 @@ retailer_modes = {
 
 
 function_map = {
-     "RELIANCE RETAIL LIMITED": run_llm_po,
-     "METRO CASH AND CARRY INDIA LIMITED": run_llm_po,
+    "RELIANCE RETAIL LIMITED": run_llm_po,
+    "METRO CASH AND CARRY INDIA LIMITED": run_llm_po,
     "MORE RETAIL PRIVATE LIMITED": run_llm_po
 }
 
