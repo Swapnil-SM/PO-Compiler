@@ -17,7 +17,8 @@ The app fetches PO emails using sender rules and retailer mapping (Google Sheets
 - SQLite-based storage  
 - Automated Excel report generation and mailing  
 - Centralized logging with AWS S3 (30-day retention)  
-- Easy onboarding of new retailers via mapping sheet  
+- Easy onboarding of new retailers via mapping sheet
+- Retailer-specific prompt templates stored in AWS S3, enabling prompt updates without code changes
 
 ## Workflow
 
