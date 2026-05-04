@@ -72,22 +72,6 @@ po_file_path = data.get('POFilePath')
 download_folder = os.path.join(po_file_path, "PO_Downloaded_Files")
 os.makedirs(download_folder, exist_ok=True)
 
-# # Extract connection parameters
-# host = po_connection_details.get('Host')
-# port = po_connection_details.get('Port')
-# database = po_connection_details.get('Database')
-# username = po_connection_details.get('Username')
-# password = po_connection_details.get('Password')
-
-# # Database connection
-# try:
-#     conn = psycopg2.connect(database=database, user=username, password=password, host=host, port=port)
-#     print("Database connection established successfully.")
-# except psycopg2.Error as e:
-#     print("Error: Unable to connect to the database.")
-#     print(e)
-#     exit()
-
 #Email credentials
 imap_host = 'imap.gmail.com'
 imap_user = data["POLogin"]["mail"]
