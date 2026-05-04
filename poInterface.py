@@ -67,15 +67,9 @@ retailer_modes = {
 
 
 function_map = {
-    # "RELIANCE RETAIL LIMITED": run_llm_po,
-    # "METRO CASH AND CARRY INDIA LIMITED": run_llm_po,
-    #"MORE RETAIL PRIVATE LIMITED": run_llm_po,
-    "APOLLO HEALTHCO LIMITED": apollo,
-    "ZAIN TRADERS AND CO": zain,
-    "WELLNESS FOREVER MEDICARE LIMITED ZEDC": wellness,
-    "TRENT HYPERMARKET PRIVATE LIMITED": trent,
-    "LOTS": lots,
-    "AVENUE SUPERMARTS LTD.": avenue,
+     "RELIANCE RETAIL LIMITED": run_llm_po,
+     "METRO CASH AND CARRY INDIA LIMITED": run_llm_po,
+    "MORE RETAIL PRIVATE LIMITED": run_llm_po
 }
 
 class LogCapture:
