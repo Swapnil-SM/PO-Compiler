@@ -16,14 +16,7 @@ import logging
 import io
 from contextlib import redirect_stdout, redirect_stderr
 
-from apollo import apollo
-
 from llm_call import run_llm_po
-from trent import trent
-from wellness import wellness
-from zain import zain
-from lots import lots
-from avenue import avenue
 import gspread
 from google.oauth2.service_account import Credentials
 
