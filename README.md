@@ -33,7 +33,11 @@ The app fetches PO emails using sender rules and retailer mapping (Google Sheets
 
 - No code changes needed to add new retailers  
 - Reduced manual effort and improved accuracy  
-- Scalable for multiple vendors and formats  
+- Scalable for multiple vendors and formats
+
+## Output Excel file View 
+<img width="1364" height="402" alt="image" src="https://github.com/user-attachments/assets/81447c21-424b-4ea3-a1bd-937659378f55" />
+
 
 ## Tech Stack
 
