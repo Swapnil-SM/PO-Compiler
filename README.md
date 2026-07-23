@@ -4,6 +4,8 @@ PO Compiler is an application that automates purchase order processing from emai
 
 ## App Interface
 <img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/f7bdb5a4-0b90-4fed-b9c5-95134ac40706" />
+
+
 ## Architecture
 
 ```mermaid
