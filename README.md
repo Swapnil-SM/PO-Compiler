@@ -5,46 +5,21 @@ PO Compiler is an application that automates purchase order processing from emai
 ## App Interface
 <img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/f7bdb5a4-0b90-4fed-b9c5-95134ac40706" />
 ## Architecture
-                    Google Sheets
-               (Retailer Mapping Sheet)
-                        │
-                        ▼
-                Find Sender Rules
-                        │
-                        ▼
-                  Gmail Inbox
-                        │
-        Search mails from approved senders
-                        │
-                        ▼
-             Download PDF Attachments
-                        │
-                        ▼
-                  PDF Processing
-                        │
-                        ▼
-        Retailer-specific Prompt (AWS S3)
-                        │
-                        ▼
-                 Groq LLM Extraction
-                        │
-                        ▼
-        Structured JSON (PO Details)
-                        │
-                        ▼
-             SKU/Product Mapping
-          (using Product Master Data)
-                        │
-                        ▼
-                  SQLite Database
-                        │
-         ┌──────────────┴──────────────┐
-         │                             │
-         ▼                             ▼
-   Excel Report                 Logs → AWS S3
-         │
-         ▼
-   Email Report to Team
+
+```mermaid
+flowchart TD
+    A[Google Sheets<br/>Retailer Mapping] --> B[Gmail Inbox]
+    B --> C[Download PDF]
+    C --> D[Retailer Prompt<br/>AWS S3]
+    D --> E[Groq LLM]
+    E --> F[Structured JSON]
+    F --> G[SKU Mapping]
+    G --> H[SQLite Database]
+    H --> I[Excel Report]
+    I --> J[Email to Team]
+    H --> K[AWS S3 Logs]
+```
+                      
 
    
 ## Overview
