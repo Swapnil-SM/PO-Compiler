@@ -1,24 +1,11 @@
 import sys
-import time
-import pdfplumber
-import re
-from openpyxl import Workbook, load_workbook
-import imaplib
-import email
 import os
-import smtplib
-from email import encoders
-from email.mime.base import MIMEBase
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email import utils
-import logging
-from datetime import datetime, timedelta
 import json
-import gspread
-import pandas as pd
-from oauth2client.service_account import ServiceAccountCredentials
+
+from openpyxl import Workbook
 from mailer import databaseconnection
+
+
 sys.path.append('/opt/airflow/scripts/Pocompilation/')
 
 script_dir = os.path.dirname(__file__)
@@ -93,8 +80,6 @@ def generate_excel(df,start_date):
     excel_file_path = os.path.join(Upload_folder, f'{company}_PO_File_{start_date}_to_{today_date}.xlsx')
     wb.save(excel_file_path)
     print(f"Excel file saved at: {excel_file_path}")     
-
-from mailer import databaseconnection
 
 
 # -------------------------------------------------------
