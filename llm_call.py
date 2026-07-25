@@ -142,7 +142,7 @@ PURCHASE ORDER DOCUMENT CONTENT:
                     {"role": "user", "content": final_prompt}
                 ],
                 temperature=0,
-                timeout=60  # ✅ prevents silent connection hangs
+                timeout=60  #  prevents silent connection hangs
             )
         except Exception as e:
             print("❌ LLM CONNECTION ERROR:", str(e))
@@ -162,11 +162,11 @@ PURCHASE ORDER DOCUMENT CONTENT:
             try:
                 return json.loads(json_candidate)
             except json.JSONDecodeError as e:
-                print("❌ JSON PARSE ERROR:", e)
-                print("🔴 BROKEN JSON:\n", json_candidate[:1500])
+                print("JSON PARSE ERROR:", e)
+                print(" BROKEN JSON:\n", json_candidate[:1500])
                 raise
 
-        print("❌ LLM RAW OUTPUT:\n", result_text[:1500])
+        print("LLM RAW OUTPUT:\n", result_text[:1500])
         raise ValueError("LLM did not return valid JSON")
 
     # ---------------- MAIN PIPELINE ----------------
