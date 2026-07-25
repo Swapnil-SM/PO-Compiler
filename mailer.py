@@ -130,7 +130,6 @@ def send_mail_with_pdf(emails, filename, company, today_date):
         smtp_port = 587
         sender_email = imap_user
         sender_password = imap_password  
-        recipient_emails = data["MailSendTo"]["mailid"]
         subject = f'{company} PO Excel {today_date}'
         
         msg = MIMEMultipart()
