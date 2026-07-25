@@ -3,10 +3,9 @@ import os
 import json
 
 from openpyxl import Workbook
-from mailer import databaseconnection
+from local_db import get_connection
 
 
-sys.path.append('/opt/airflow/scripts/Pocompilation/')
 
 script_dir = os.path.dirname(__file__)
 posettings = os.path.join(script_dir, 'posettings.json')
@@ -86,7 +85,7 @@ def generate_excel(df,start_date):
 # CHECK PO EXISTS
 # -------------------------------------------------------
 def check_data_in_database(ponumber):
-    conn = databaseconnection()
+   conn = get_connection()
     cur = conn.cursor()
 
     cur.execute(
@@ -110,7 +109,7 @@ def check_data_in_database(ponumber):
 # UPLOAD / UPDATE PO
 # -------------------------------------------------------
 def upload_po(df):
-    conn = databaseconnection()
+   conn = get_connection()
     cur = conn.cursor()
 
     for index, row in df.iterrows():
