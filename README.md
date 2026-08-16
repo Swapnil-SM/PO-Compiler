@@ -1,6 +1,6 @@
 # PO Compiler
 
-PO Compiler is an application that automates purchase order processing from email ingestion to structured data storage and report generation.
+PO Compiler is an application that automates purchase order(PO) processing from email ingestion to structured data storage and report generation.
 
 ## App Interface
 <img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/f7bdb5a4-0b90-4fed-b9c5-95134ac40706" />
